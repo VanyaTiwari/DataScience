@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="Globals">
-    <ProjectGuid>ce27def4-9d7a-439b-abdf-60bfb35b9e40</ProjectGuid>
+    <ProjectGuid>a3fb6729-0b51-41fb-96e5-f4283f57057e</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
@@ -21,5 +21,5 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\RTVS\Rules\rtvs.rules.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\RTVS\Rules\rtvs.rules.props') And !Exists('$(MSBuildUserExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\RTVS\Rules\rtvs.rules.props')" />
   <Import Project="$(MSBuildUserExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\RTVS\Targets\Microsoft.R.targets" Condition="Exists('$(MSBuildUserExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\RTVS\Targets\Microsoft.R.targets')" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\RTVS\Targets\Microsoft.R.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\RTVS\Targets\Microsoft.R.targets') And !Exists('$(MSBuildUserExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\RTVS\Targets\Microsoft.R.targets')" />
-  <Import Project="Practical1.InMemory.Targets" Condition="Exists('Practical1.InMemory.Targets')" />
+  <Import Project="CA2 Web Scrapping.InMemory.Targets" Condition="Exists('CA2 Web Scrapping.InMemory.Targets')" />
 </Project>
