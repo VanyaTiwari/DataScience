@@ -1,15 +1,17 @@
+
+#Finding whether the increase crime rates of men s related to the education rate in ireland.
 robbery_data <- read.csv("Data/Robbery.csv")
 education <- read.csv("Data/Education.csv")
-
+#Merging the two datasets
 colnames(robbery_data) <- c('Year','Male-Crime','Female-Crime')
 colnames(education) <- c('Year', 'Male-Education', 'Female-Education')
 crime_data <- merge(robbery_data,education)
 crime_data
-plot(crime_data)
-scatter.smooth(x = crime_data$`Male-Crime`, y = crime_data$`Male-Education`, main = "MaleCrime ~ Education") # scatterplot
-boxplot(crime_data$`Male-Crime`, main = "Crime", sub = paste("Outlier rows: ", boxplot.stats(crime_data$`Male-Crime`)$out)) # box plot for 'Crime'
-boxplot(crime_data$`Male-Education`, main = "education", sub = paste("Outlier rows: ", boxplot.stats(crime_data$`Male-Education`)$out)) # box plot for 'Education'
-#density plot for males in robbery
+scatter.smooth(x =crime_data$Male , y = , main = "Dist ~ Speed") # scatterplot
+
+boxplot(cars$speed, main = "Speed", sub = paste("Outlier rows: ", boxplot.stats(cars$speed)$out)) # box plot for 'speed'
+boxplot(cars$dist, main = "Distance", sub = paste("Outlier rows: ", boxplot.stats(cars$dist)$out)) # box plot for 'distance'
+#density plot for males and females in robbery
 plot(density(robbery_data$Male), main = "Density Plot: Male in robbery-crime", ylab = "Frequency", sub = paste("Skewness:", round(e1071::skewness(robbery_data$Male), 2)))
 polygon(density(robbery_data$Male), col = "red")
 plot(density(robbery_data$Female), main = "Density Plot: Female in robbery-crime", ylab = "Frequency", sub = paste("Skewness:", round(e1071::skewness(robbery_data$Female), 2)))
@@ -22,6 +24,7 @@ print(linearmod)
 summary(linearmod)
 AIC(linearmod)
 BIC(linearmod)
+#Splitting the data into Training and Testing Data 
 no_od_records <- sample(1:nrow(crime_data), 0.8 * nrow(crime_data))
 training_data <- crime_data[no_od_records,]
 training_data
